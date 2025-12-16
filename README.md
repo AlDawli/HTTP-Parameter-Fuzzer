@@ -14,7 +14,21 @@ bash (v4.0+)
 curl
 xargs (optional, for parallel processing)
 
-# Usage
+# 🚀 Quick Start
+bash# Make executable
+chmod +x param_fuzzer.sh
+
+# Basic test
+./param_fuzzer.sh -u "https://example.com/api"
+
+# With reflection detection
+./param_fuzzer.sh -u "https://example.com/search" -r
+
+# Extract from JS + save results
+./param_fuzzer.sh -u "https://example.com/api" \
+  -j "https://example.com/app.js" \
+  -o results.txt
+
 # Basic Examples
 Test with built-in common parameters:
 bash./param_fuzzer.sh -u "https://example.com/api/user"
